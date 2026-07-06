@@ -1,2 +1,2 @@
 # JavaPOO
-Repositório de JAVA orientado a objetos
+Repositório de JAVA orientado a objetos.
