@@ -37,7 +37,20 @@ public class Estudante {
         }else{
             System.out.println("As 5 notas já foram preenchidas. Caso queira adicionar uma, é necessário excluir.");
         }
-
+    }
+    public double calculaSoma(ArrayList<Double> notas){
+        double soma;
+        soma = 0;
+        for (double valor : notas){
+            soma += valor;
+        }
+        return soma;
+    }
+    public double calculaMedia(ArrayList<Double> notas){
+        double media;
+        int tamanho = tamanhoArray();
+        media= calculaSoma(notas)/tamanho;
+        return media;
     }
 }
 
