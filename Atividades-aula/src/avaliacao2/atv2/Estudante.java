@@ -26,5 +26,18 @@ public class Estudante {
     public void setNotas(ArrayList<Double> notas) {
         this.notas = notas;
     }
+    public int tamanhoArray(){
+        int tam = notas.size();
+        return tam;
+    }
+    public void insereNotas(double nota){
+        int tamanho = tamanhoArray();
+        if (tamanho < 4){
+            this.notas.add(nota);
+        }else{
+            System.out.println("As 5 notas já foram preenchidas. Caso queira adicionar uma, é necessário excluir.");
+        }
+
+    }
 }
 
