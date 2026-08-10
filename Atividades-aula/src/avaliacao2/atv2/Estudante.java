@@ -9,7 +9,7 @@ public class Estudante {
 
     public Estudante(String nome){
         this.nome = nome;
-        this.notas = new ArrayList<>();
+        this.notas = new ArrayList<Double>();
     }
 
     public String getNome() {
@@ -59,5 +59,6 @@ public class Estudante {
         menorNota = Collections.min(notas);
         return menorNota;
     }
+
 }
 
