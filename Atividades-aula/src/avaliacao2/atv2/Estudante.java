@@ -59,6 +59,16 @@ public class Estudante {
         menorNota = Collections.min(notas);
         return menorNota;
     }
-
+    public Estudante estudantesAprovados(ArrayList<Estudante> estudantes){
+        for (Estudante estudante : estudantes){
+            double media;
+            media = estudante.calculaMedia(estudante.getNotas());
+            if(media <= 6){
+                ArrayList<Estudante> aprovados = new ArrayList<Estudante>();
+                aprovados.add(estudante);
+            }
+        }
+        return null;
+    }
 }
 
