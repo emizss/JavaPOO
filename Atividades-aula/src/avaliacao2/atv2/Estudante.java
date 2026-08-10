@@ -1,7 +1,7 @@
 package avaliacao2.atv2;
 import java.util.ArrayList;
 import java.util.Collections;
-
+import java.lang.String;
 public class Estudante {
     private String nome;
     private  ArrayList<Double> notas;
@@ -9,7 +9,7 @@ public class Estudante {
 
     public Estudante(String nome){
         this.nome = nome;
-        this.notas = new ArrayList();
+        this.notas = new ArrayList<>();
     }
 
     public String getNome() {
@@ -27,6 +27,7 @@ public class Estudante {
     public void setNotas(ArrayList<Double> notas) {
         this.notas = notas;
     }
+
     public int tamanhoArray(){
         int tam = notas.size();
         return tam;
