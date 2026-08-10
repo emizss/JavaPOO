@@ -66,9 +66,12 @@ public class Estudante {
             if(media <= 6){
                 ArrayList<Estudante> aprovados = new ArrayList<Estudante>();
                 aprovados.add(estudante);
+                //return aprovados;
+            }else{
+                return null;
             }
         }
-        return null;
+
     }
 }
 
