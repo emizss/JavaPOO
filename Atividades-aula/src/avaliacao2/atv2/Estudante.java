@@ -1,5 +1,6 @@
 package avaliacao2.atv2;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Estudante {
     private String nome;
@@ -51,6 +52,11 @@ public class Estudante {
         int tamanho = tamanhoArray();
         media= calculaSoma(notas)/tamanho;
         return media;
+    }
+    public double menorNota(ArrayList<Double> notas){
+        double menorNota;
+        menorNota = Collections.min(notas);
+        return menorNota;
     }
 }
 
