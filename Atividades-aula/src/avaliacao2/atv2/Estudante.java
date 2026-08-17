@@ -5,9 +5,10 @@ import java.lang.String;
 public class Estudante {
     private String nome;
     private  ArrayList<Double> notas;
-
+    private Double media;
 
     public Estudante(String nome){
+        this.media = media;
         this.nome = nome;
         this.notas = new ArrayList<Double>();
     }
@@ -28,13 +29,18 @@ public class Estudante {
         this.notas = notas;
     }
 
+    public Double getMedia() {
+        return media;
+    }
+    public void setMedia(){this.media = media;}
+
     public int tamanhoArray(){
         int tam = notas.size();
         return tam;
     }
     public void insereNotas(double nota){
         int tamanho = tamanhoArray();
-        if (tamanho < 4){
+        if (tamanho <= 4){
             this.notas.add(nota);
         }else{
             System.out.println("As 5 notas já foram preenchidas. Caso queira adicionar uma, é necessário excluir.");
@@ -49,7 +55,6 @@ public class Estudante {
         return soma;
     }
     public double calculaMedia(ArrayList<Double> notas){
-        double media;
         int tamanho = tamanhoArray();
         media= calculaSoma(notas)/tamanho;
         return media;
@@ -59,19 +64,11 @@ public class Estudante {
         menorNota = Collections.min(notas);
         return menorNota;
     }
-    public Estudante estudantesAprovados(ArrayList<Estudante> estudantes){
-        for (Estudante estudante : estudantes){
-            double media;
-            media = estudante.calculaMedia(estudante.getNotas());
-            if(media <= 6){
-                ArrayList<Estudante> aprovados = new ArrayList<Estudante>();
-                aprovados.add(estudante);
-                //return aprovados;
-            }else{
-                return null;
-            }
-        }
 
+    public String toString(){
+
+        return String.format("Nome: %s e média  %.2f", nome, media);
     }
+
 }
 
