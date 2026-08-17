@@ -1,7 +1,8 @@
 package avaliacao2.atv2;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.lang.String;
+
+
 
 public class MainE {
     public static void main(String[] args){
@@ -11,7 +12,7 @@ public class MainE {
         int op = 1;
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Estudante> estudantes = new ArrayList<Estudante>();
+        Manager manager = new Manager();
 
 
         do{
@@ -31,13 +32,15 @@ public class MainE {
             System.out.println("Média:" + estudante.calculaMedia(estudante.getNotas()));
 
             System.out.println("Menor nota:" + estudante.menorNota(estudante.getNotas()));
-            estudantes.add(estudante);
+
+            manager.insereEstudante(estudante);
 
             System.out.println("Digite 0 para inserir estudante e 1 para sair:");
             op = scanner.nextInt();
             scanner.nextLine();
         }while(op == 0);
 
+        System.out.println("Alunos aprovados:" + manager.estudantesAprovados());
 
     }
 }
