@@ -3,7 +3,7 @@ package avaliacao2.atv5;
 public class Periodico extends Obra{
     private int numVolume;
 
-    public Periodico(String titulo) {
+    public Periodico(String titulo, int volume) {
         super(titulo);
     }
 
